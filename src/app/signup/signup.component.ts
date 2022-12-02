@@ -7,6 +7,7 @@ import {
   AbstractControl,
   ValidationErrors,
 } from '@angular/forms';
+import { AvailabilityValidator } from './availability.validator';
 
 const passwordMatchValidator: ValidatorFn = (
   form: AbstractControl
@@ -27,7 +28,11 @@ const passwordMatchValidator: ValidatorFn = (
 export class SignupComponent {
   signupForm = new FormGroup(
     {
-      email: new FormControl('', [Validators.required, Validators.email]),
+      email: new FormControl('', {
+        validators: [Validators.required, Validators.email],
+        asyncValidators: [this.availVal.validate.bind(this.availVal)],
+        updateOn: 'blur'
+      }),
       password: new FormControl('', [Validators.required]),
       passwordConfirm: new FormControl('', [Validators.required]),
     },
@@ -35,4 +40,6 @@ export class SignupComponent {
   );
 
   submitted = false;
+
+  constructor(private availVal: AvailabilityValidator) {}
 }
