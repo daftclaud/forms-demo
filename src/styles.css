@@ -1,9 +1,21 @@
-@import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
+@import url("https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css");
 
-.ng-valid[required], .ng-valid.required  {
-  border-left: 5px solid #42A948; /* green */
+.container {
+  max-width: 420px;
+  border: solid;
+  border-radius: 10px;
+  padding-bottom: 15px;
 }
 
-.ng-invalid:not(form):not(.ng-untouched)  {
+h1 {
+  text-align: center;
+}
+
+.ng-valid[required],
+.ng-valid.required {
+  border-left: 5px solid #42a948; /* green */
+}
+
+.ng-invalid:not(form):not(.ng-untouched) {
   border-left: 5px solid #a94442; /* red */
 }
