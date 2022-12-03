@@ -5,6 +5,7 @@
 .row {
     display: flex;
     column-gap: 2rem;
+    align-items: baseline;
 }
 
 .player-list {
