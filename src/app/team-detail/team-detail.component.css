@@ -5,7 +5,12 @@
 .row {
     display: flex;
     column-gap: 2rem;
-    align-items: baseline;
+    align-items: flex-start;
+}
+
+label {
+    display: flex;
+    align-items: center;
 }
 
 .player-list {
@@ -13,7 +18,15 @@
 }
 
 .card {
+    display: flex;
+    justify-content: space-between;
     outline: solid;
     border-radius: 5px;
     padding: 10px;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }

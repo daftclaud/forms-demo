@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     row-gap: 2rem;
-    border: solid;
+    outline: solid;
     border-radius: 10px;
 }
 
