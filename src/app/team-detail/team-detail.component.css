@@ -16,17 +16,3 @@ label {
 .player-list {
     flex: 20%;
 }
-
-.card {
-    display: flex;
-    justify-content: space-between;
-    outline: solid;
-    border-radius: 5px;
-    padding: 10px;
-}
-
-.stat {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
