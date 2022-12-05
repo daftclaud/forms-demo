@@ -8,4 +8,8 @@ import { Player } from '../player';
 })
 export class TeamDetailComponent {
   players: Player[] = [];
+
+  addPlayer(player: Player) {
+    this.players.push(player);
+  }
 }

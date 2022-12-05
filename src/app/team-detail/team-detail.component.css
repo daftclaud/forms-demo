@@ -15,4 +15,7 @@ label {
 
 .player-list {
     flex: 20%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
 }

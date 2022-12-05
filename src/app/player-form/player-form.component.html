@@ -1,5 +1,5 @@
 <div class="container">
-    <form [formGroup]="playerForm">
+    <form (submit)="submit()" [formGroup]="playerForm">
         <div class="form-group">
             <label for="name">Name</label>
             <input id="name" class="form-control" formControlName="name">
