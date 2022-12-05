@@ -12,7 +12,6 @@ export class TeamDetailComponent {
 
   addPlayer(player: Player) {
     this.players.push(player);
-    this.isAddPlayer = false;
   }
 
   toggleAddPlayer(value: boolean) {
