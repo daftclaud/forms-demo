@@ -7,7 +7,14 @@ export interface PlayerStats {
   turnovers: number;
 }
 
-export type PlayerPosition = 'PG' | 'SG' | 'SF' | 'PF' | 'C'
+// export type PlayerPosition = 'PG' | 'SG' | 'SF' | 'PF' | 'C'
+export enum PlayerPositions {
+  PG = 'Point Guard',
+  SG = 'Shooting Guard',
+  SF = 'Shooting Forward',
+  PF = 'Power Forward',
+  C = 'Center'
+}
 
 export class Player {
   stats: PlayerStats = {
@@ -18,7 +25,20 @@ export class Player {
     steals: 0,
     turnovers: 0,
   };
-  constructor(public name: string, public position: PlayerPosition) {}
+  constructor(public name: string, public position: PlayerPositions) {}
+
+  static listPositionNames() {
+    return Object.values(PlayerPositions);
+  }
+
+  static getPositionFromName(name: string) {
+    const nameIndex = Object.values(PlayerPositions).indexOf(name as PlayerPositions);
+    return Object.keys(PlayerPositions)[nameIndex];
+  }
+
+  listStats(): (keyof PlayerStats)[] {
+    return Object.keys(this.stats) as (keyof PlayerStats)[];
+  }
 
   incrementStat(statName: keyof PlayerStats, amount: number) {
     this.stats[statName] += amount;
@@ -26,9 +46,5 @@ export class Player {
 
   getStat(statName: keyof PlayerStats) {
     return this.stats[statName];
-  }
-
-  listStats(): (keyof PlayerStats)[] {
-    return Object.keys(this.stats) as (keyof PlayerStats)[];
   }
 }

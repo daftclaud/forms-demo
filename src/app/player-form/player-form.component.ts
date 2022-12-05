@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { Player, PlayerPosition } from '../player';
+import { Player, PlayerPositions } from '../player';
 
 @Component({
   selector: 'app-player-form',
@@ -10,13 +10,21 @@ import { Player, PlayerPosition } from '../player';
 export class PlayerFormComponent {
   playerForm = this.fb.group({
     name: this.fb.control<string | null>(null, Validators.required),
-    position: this.fb.control<PlayerPosition | null>(null, Validators.required),
+    position: this.fb.control<PlayerPositions | null>(null, Validators.required),
   });
 
   @Output('onCreate') onCreate = new EventEmitter<Player>();
 
   constructor(private fb: FormBuilder) {
     console.log(this.playerForm);
+  }
+
+  get positions() {
+    return Player.listPositionNames();
+  }
+
+  getPosition(name: string) {
+    return Player.getPositionFromName(name as PlayerPositions);
   }
 
   submit() {

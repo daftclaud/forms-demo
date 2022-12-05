@@ -8,10 +8,10 @@
         <div class="form-group">
             <label for="position">Position</label>
             <select id="position" class="form-control" formControlName="position">
-
+                <option *ngFor="let position of positions" [value]="getPosition(position)">{{position}}</option>
             </select>
         </div>
-        
+ 
         <button [disabled]="playerForm.invalid" type="submit" class="btn btn-success">Add Player</button>
     </form>
 </div>
