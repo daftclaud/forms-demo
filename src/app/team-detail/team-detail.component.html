@@ -1,10 +1,11 @@
 <div class="container">
     <h1>Team Name</h1>
     <div class="row">
-        <div class="player-list">
-            <app-player-card></app-player-card>
+        <div class="player-list" *ngFor="let player of players">
+            <app-player-card [player]="player"></app-player-card>
         </div>
 
-        <app-player-detail></app-player-detail>
+        <!-- <app-player-detail></app-player-detail> -->
+        <app-player-form></app-player-form>
     </div>
 </div>

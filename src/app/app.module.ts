@@ -8,6 +8,7 @@ import { SignupComponent } from './signup/signup.component';
 import { TeamDetailComponent } from './team-detail/team-detail.component';
 import { PlayerDetailComponent } from './player-detail/player-detail.component';
 import { PlayerCardComponent } from './player-card/player-card.component';
+import { PlayerFormComponent } from './player-form/player-form.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { PlayerCardComponent } from './player-card/player-card.component';
     SignupComponent,
     TeamDetailComponent,
     PlayerDetailComponent,
-    PlayerCardComponent
+    PlayerCardComponent,
+    PlayerFormComponent
   ],
   imports: [
     BrowserModule,
