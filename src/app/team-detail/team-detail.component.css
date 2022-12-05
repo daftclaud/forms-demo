@@ -19,3 +19,7 @@ label {
     flex-direction: column;
     row-gap: 2rem;
 }
+
+.selected {
+    background-color: gainsboro;
+}

@@ -9,6 +9,7 @@ import { Player } from '../player';
 export class TeamDetailComponent {
   players: Player[] = [];
   isAddPlayer = false;
+  selectedPlayer: Player | null = null;
 
   addPlayer(player: Player) {
     this.players.push(player);
