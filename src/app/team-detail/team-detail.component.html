@@ -1,5 +1,5 @@
 <div class="container">
-    <h1>Team Name</h1>
+    <h1>Globant Trotters - {{points}}</h1>
     <div class="row">
         <div class="player-list">
             <app-player-card [ngClass]="{'selected': player === selectedPlayer}" (click)="selectedPlayer = player" *ngFor="let player of players; let i = index" [player]="player"></app-player-card>

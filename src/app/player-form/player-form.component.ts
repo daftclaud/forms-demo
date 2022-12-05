@@ -15,9 +15,7 @@ export class PlayerFormComponent {
 
   @Output('onCreate') onCreate = new EventEmitter<Player>();
 
-  constructor(private fb: FormBuilder) {
-    console.log(this.playerForm);
-  }
+  constructor(private fb: FormBuilder) {}
 
   get positions() {
     return Player.listPositionNames();
