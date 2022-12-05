@@ -8,8 +8,14 @@ import { Player } from '../player';
 })
 export class TeamDetailComponent {
   players: Player[] = [];
+  isAddPlayer = false;
 
   addPlayer(player: Player) {
     this.players.push(player);
+    this.isAddPlayer = false;
+  }
+
+  toggleAddPlayer(value: boolean) {
+    this.isAddPlayer = value;
   }
 }

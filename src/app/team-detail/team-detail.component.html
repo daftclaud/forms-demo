@@ -5,7 +5,10 @@
             <app-player-card *ngFor="let player of players" [player]="player"></app-player-card>
         </div>
 
-        <!-- <app-player-detail></app-player-detail> -->
-        <app-player-form (onCreate)="addPlayer($event)"></app-player-form>
+        <app-player-detail *ngIf="!isAddPlayer"></app-player-detail>
+        <app-player-form *ngIf="isAddPlayer" (onCreate)="addPlayer($event)"></app-player-form>
+
     </div>
+
+    <button class="btn btn-link" (click)="toggleAddPlayer(!isAddPlayer)">{{isAddPlayer ? '➖' : '➕'}} Add Player</button>
 </div>
