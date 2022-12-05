@@ -17,8 +17,8 @@
         </label>
 
         <div class="button-group">
-            <button rebound-type="Defensive" class="btn">+1 Defensive</button>
-            <button rebound-type="Offensive" class="btn">+1 Offensive</button>
+            <button (click)="increment('rebounds', 1)" rebound-type="Defensive" class="btn">+1 Defensive</button>
+            <button (click)="increment('rebounds', 1)" rebound-type="Offensive" class="btn">+1 Offensive</button>
         </div>
     </div>
 
@@ -28,7 +28,7 @@
         </label>
 
         <div class="button-group">
-            <button class="btn">+1</button>
+            <button (click)="increment('assists', 1)" class="btn">+1</button>
         </div>
     </div>
 
@@ -38,7 +38,7 @@
         </label>
 
         <div class="button-group">
-            <button class="btn">+1</button>
+            <button (click)="increment('blocks', 1)" class="btn">+1</button>
         </div>
     </div>
 
@@ -48,7 +48,7 @@
         </label>
 
         <div class="button-group">
-            <button class="btn">+1</button>
+            <button (click)="increment('steals', 1)" class="btn">+1</button>
         </div>
     </div>
     
@@ -58,7 +58,7 @@
         </label>
 
         <div class="button-group">
-            <button class="btn">+1</button>
+            <button (click)="increment('turnovers', 1)" class="btn">+1</button>
         </div>
     </div>
 </div>
