@@ -1,32 +1,11 @@
 <div class="card">
-    <label>Player Name - FG</label>
-    <div class="stat">
-        <b>P</b>
-        <span>24</span>
-    </div>
+    <label>{{player.name}} - {{player.position}}</label>
 
-    <div class="stat">
-        <b>R</b>
-        <span>8</span>
-    </div>
+    <ng-container *ngFor="let stat of player.listStats()">
+        <div class="stat">
+            <b>{{stat.charAt(0) | uppercase}}</b>
+            <span>{{player.getStat(stat)}}</span>
+        </div>
+    </ng-container>
 
-    <div class="stat">
-        <b>A</b>
-        <span>5</span>
-    </div>
-
-    <div class="stat">
-        <b>B</b>
-        <span>4</span>
-    </div>
-
-    <div class="stat">
-        <b>S</b>
-        <span>2</span>
-    </div>
-
-    <div class="stat">
-        <b>T</b>
-        <span>1</span>
-    </div>
 </div>
