@@ -4,10 +4,10 @@
         <form #loginForm="ngForm">
             <div class="form-group">
                 <label for="email">Email</label>
-                <input id="email" type="email" class="form-control" required email [(ngModel)]="email" name="email"
+                <input id="email" type="email" class="form-control" required email [(ngModel)]="email"  name="email"
                     #emailCtrl="ngModel">
 
-                <div [hidden]="!(emailCtrl.hasError('required') && emailCtrl.touched)" class="alert alert-danger">
+                <div [hidden]="!(emailCtrl.hasError('required') && emailCtrl.dirty)" class="alert alert-danger">
                     Email is required
                 </div>
 
